@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- -------click presionado -------- click cuando sueltas  -->
+		<h1
+			id="titulo"
+			onmousedown="rojo(this)"
+			onmouseup="azul(this)"
+			onclick="verde(this)">
+			Manejo del DOM con JS
+		</h1>
+		<br />
+		nombre: <input type="text" onchange="convertir(this)" />
+		<script>
+			function rojo(titulo) {
+				console.log("onmousedown cambió a rojo");
+				titulo.style.color = "red";
+			}
+
+			function azul(titulo) {
+				console.log("onmouseup cambió a azul");
+				titulo.style.color = "blue";
+			}
+
+			function verde(titulo) {
+				console.log("onclick cambió a verde");
+				titulo.style.color = "green";
+			}
+		</script>
+	</body>
+</html>
